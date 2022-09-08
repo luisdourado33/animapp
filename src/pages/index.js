@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useGlobal } from '../context/Global'
+
 import HighlightHero from '../components/organisms/HighlightHero'
 import AnimeListSection from '../components/organisms/AnimeListSection'
 
