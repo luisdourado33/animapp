@@ -1,4 +1,5 @@
 import '../styles/global.less'
+import '../styles/global.css'
 
 import Navbar from '../components/organisms/Navbar'
 import Spinner from '../components/molecules/Spinner'

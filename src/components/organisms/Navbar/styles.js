@@ -32,6 +32,7 @@ export const ItemMenu = styled.a`
   font-weight: bolder;
   text-transform: uppercase;
   transition: border-bottom 0.5s;
+  font-family: Inter;
   border-bottom: 5px solid transparent;
   height: fit-content;
   color: ${({ isOnTop }) => (isOnTop ? '#ffff' : '#000000')};
