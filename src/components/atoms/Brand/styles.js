@@ -12,6 +12,7 @@ export const Container = styled.div`
 export const Typography = styled.h1`
   color: #ffff;
   font-weight: bolder;
+  font-family: 'Bangers';
   padding: 0px;
   margin: 0px;
   transition: all 0.5s;
@@ -21,6 +22,6 @@ export const Typography = styled.h1`
   }
 
   &:hover {
-    transform: scale(110%);
+    transform: scale(105%);
   }
 `
