@@ -11,15 +11,13 @@ export const Container = styled.div`
 `
 export const Typography = styled.h1`
   color: #ffff;
-  font-weight: bolder;
   font-family: 'Bangers';
+  font-size: 40px;
   padding: 0px;
   margin: 0px;
   transition: all 0.5s;
-
-  > span {
-    color: #000;
-  }
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: black;
 
   &:hover {
     transform: scale(105%);
