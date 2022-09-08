@@ -1,4 +1,3 @@
-import { SearchOutlined } from '@ant-design/icons'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -20,9 +19,5 @@ export const Container = styled.div`
     justify-content: flex-end;
     padding-right: 15px;
     margin-left: 15px;
-
-    ${SearchOutlined} {
-      cursor: pointer;
-    }
   }
 `
