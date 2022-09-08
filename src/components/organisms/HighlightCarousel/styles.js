@@ -1,7 +1,11 @@
 import styled from 'styled-components'
-import { Carousel } from 'antd'
+
+import { Carousel as AntdCarousel } from 'antd'
 
 export const Container = styled.div`
   width: 100%;
-  height: fit-content;
+`
+
+export const Carousel = styled(AntdCarousel)`
+  padding-block: 35px;
 `
