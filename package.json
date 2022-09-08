@@ -15,6 +15,7 @@
     "@ant-design/icons": "^4.7.0",
     "antd": "^4.23.0",
     "autoprefixer": "^10.4.8",
+    "axios": "^0.27.2",
     "concurrently": "^7.4.0",
     "gulp": "^4.0.2",
     "gulp-csso": "^4.0.1",
