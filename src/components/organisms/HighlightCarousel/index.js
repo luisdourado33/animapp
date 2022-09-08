@@ -5,11 +5,13 @@ import { Carousel, Container } from './styles'
 import ItemCarousel from '../../molecules/ItemCarousel'
 
 export default function HighlightCarousel({ data }) {
-  const renderItems = data?.map((item, index) => <ItemCarousel key={index} />)
+  const renderItems = data?.map((item, index) => (
+    <ItemCarousel key={index} {...item} />
+  ))
 
   return (
     <Container>
-      <Carousel>{renderItems}</Carousel>
+      <Carousel autoplay>{renderItems}</Carousel>
     </Container>
   )
 }

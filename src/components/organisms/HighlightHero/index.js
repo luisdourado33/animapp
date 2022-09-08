@@ -3,16 +3,11 @@ import { Container, Content } from './styles'
 
 import HighlightCarousel from '../HighlightCarousel'
 
-const carouselItems = [
-  { title: 'First Item', description: 'Just a description' },
-  // { title: 'Second Item', description: 'Just another description' },
-]
-
-export default function HighlightHero() {
+export default function HighlightHero({ data }) {
   return (
     <Container>
       <Content>
-        <HighlightCarousel data={carouselItems} />
+        <HighlightCarousel data={data} />
       </Content>
     </Container>
   )
