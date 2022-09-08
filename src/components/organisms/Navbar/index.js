@@ -4,6 +4,7 @@ import { Container, Menu, ItemMenu } from './styles'
 
 import Brand from '../../atoms/Brand'
 import SearchButton from '../../atoms/SearchButton'
+import Link from 'next/link'
 
 const MENU_OPTIONS = [
   {
@@ -44,9 +45,9 @@ export default function Navbar() {
   })
 
   const renderOptions = MENU_OPTIONS.map(({ label, link }, index) => (
-    <ItemMenu href={link} key={index} isOnTop={isOnTop}>
-      {label}
-    </ItemMenu>
+    <Link href={link} key={index}>
+      <ItemMenu isOnTop={isOnTop}>{label}</ItemMenu>
+    </Link>
   ))
 
   return (
