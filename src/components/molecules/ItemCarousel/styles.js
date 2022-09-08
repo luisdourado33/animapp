@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import bg from '../../../assets/images/backgrounds/highlight-hero-bg.jpg'
 
 export const Container = styled.div`
+  display: flex;
   border-radius: 12px;
   background-color: #ffff;
-  height: 400px;
-  display: flex;
+  margin-bottom: 50px;
 `
 export const ImageHighlight = styled.div`
   width: 60%;
@@ -31,6 +31,7 @@ export const BadgesRow = styled.div`
 export const TitleDetails = styled.h1`
   font-weight: bolder;
   transition: all 0.5s;
+
   &:hover {
     color: rgba(19, 101, 255, 0.8);
     cursor: pointer;
