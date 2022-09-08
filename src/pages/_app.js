@@ -1,4 +1,4 @@
-import '../styles/styles.css'
+import '../styles/global.less'
 
 import Navbar from '../components/organisms/Navbar'
 
