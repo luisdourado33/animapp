@@ -25,10 +25,9 @@ const MENU_OPTIONS = [
 ]
 
 export default function Navbar() {
-  const [isOnTop, setIsOnTop] = useState(false)
+  const [isOnTop, setIsOnTop] = useState(true)
 
   const onScrollChangeBackground = () => {
-    console.log('Is on top: ' + isOnTop)
     if (
       document.body.scrollTop > 40 ||
       document.documentElement.scrollTop > 40

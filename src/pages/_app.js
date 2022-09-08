@@ -6,7 +6,7 @@ import Spinner from '../components/molecules/Spinner'
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Spinner isActive />
+      <Spinner isActive={false} />
       <Navbar />
       <Component {...pageProps} />
     </>
