@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react'
 
 import { Container, Menu, ItemMenu } from './styles'
 
-import SearchButton from '../../atoms/SearchButton'
-import { useRouter } from 'next/router'
 import Brand from '../../atoms/Brand'
+import SearchButton from '../../atoms/SearchButton'
 
 const MENU_OPTIONS = [
   {
@@ -26,11 +25,18 @@ const MENU_OPTIONS = [
 ]
 
 export default function Navbar() {
-  const router = useRouter()
-  const [isOnTop, setIsOnTop] = useState(true)
+  const [isOnTop, setIsOnTop] = useState(false)
 
   const onScrollChangeBackground = () => {
-    setIsOnTop(() => (window.screenY >= 66 ? false : true))
+    console.log('Is on top: ' + isOnTop)
+    if (
+      document.body.scrollTop > 40 ||
+      document.documentElement.scrollTop > 40
+    ) {
+      setIsOnTop(false)
+    } else {
+      setIsOnTop(true)
+    }
   }
 
   useEffect(() => {
@@ -39,14 +45,16 @@ export default function Navbar() {
   })
 
   const renderOptions = MENU_OPTIONS.map(({ label, link }, index) => (
-    <ItemMenu href={link} key={index}>
+    <ItemMenu href={link} key={index} isOnTop={isOnTop}>
       {label}
     </ItemMenu>
   ))
 
   return (
-    <Container className={isOnTop ? 'onTop' : 'scrolled'}>
-      <Brand>AnimApp</Brand>
+    <Container isOnTop={isOnTop}>
+      <Brand>
+        Anim<span>App</span>
+      </Brand>
       <Menu>
         {renderOptions}
         <SearchButton />
