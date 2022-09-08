@@ -1,8 +1,11 @@
 import '../styles/styles.css'
 
+import Navbar from '../components/organisms/Navbar'
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Navbar />
       <Component {...pageProps} />
     </>
   )
