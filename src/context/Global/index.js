@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react'
+
 const GlobalContext = createContext({})
 
 import { ApiService } from '../../services/animapp'
