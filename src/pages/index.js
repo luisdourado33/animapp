@@ -1,11 +1,5 @@
-import styles from '../styles/Home.module.css'
-import { Button } from 'antd'
+import HighlightHero from '../components/organisms/HighlightHero'
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-      <p>Testing Antd button</p>
-      <Button type="primary">Primary button</Button>
-    </div>
-  )
+  return <HighlightHero />
 }
