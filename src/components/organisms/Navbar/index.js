@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 
-import { Container, Brand, Menu, ItemMenu } from './styles'
+import { Container, Menu, ItemMenu } from './styles'
 
 import SearchButton from '../../atoms/SearchButton'
 import { useRouter } from 'next/router'
+import Brand from '../../atoms/Brand'
 
 const MENU_OPTIONS = [
   {
@@ -27,10 +28,6 @@ const MENU_OPTIONS = [
 export default function Navbar() {
   const router = useRouter()
   const [isOnTop, setIsOnTop] = useState(true)
-
-  useEffect(() => {
-    console.log(router)
-  }, [])
 
   const onScrollChangeBackground = () => {
     setIsOnTop(() => (window.screenY >= 66 ? false : true))

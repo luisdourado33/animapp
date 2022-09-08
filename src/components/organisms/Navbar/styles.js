@@ -25,10 +25,6 @@ export const Container = styled(Layout.Header)`
   }
 `
 
-export const Brand = styled.h1`
-  font-weight: bold;
-`
-
 export const Menu = styled.div`
   display: flex;
   align-items: center;
