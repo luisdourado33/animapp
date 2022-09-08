@@ -20,6 +20,7 @@ export function GlobalProvider({ children }) {
       .then((res) => {
         const { data } = res.data
         setFeaturedAnimes(data)
+        setIsLoading(false)
       })
       .catch((err) => {
         setIsLoading(false)
