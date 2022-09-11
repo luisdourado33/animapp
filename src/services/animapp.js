@@ -5,7 +5,7 @@ export class ApiService {
   static getAllAnimes() {
     return axios({
       method: 'GET',
-      url: `${api.baseURL}/anime`,
+      url: `${api.baseURL}/trending/anime`,
       headers: api.headers,
     })
   }

@@ -20,7 +20,7 @@ export default function CategoryGrid({ data }) {
         const { data } = res.data
         setAnimes(data)
         setIsLoading(false)
-        console.log('findAnimes')
+        console.log('Fetching: ' + category)
       })
       .catch((err) => {
         setIsLoading(false)
@@ -30,12 +30,15 @@ export default function CategoryGrid({ data }) {
 
   const handleChangeCategory = (value) => {
     setCategory(value)
-    fetchByCategory()
   }
 
   useEffect(() => {
     fetchByCategory()
   }, [])
+
+  useEffect(() => {
+    fetchByCategory()
+  }, [category])
 
   return (
     <Section>

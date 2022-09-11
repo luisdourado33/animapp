@@ -20,7 +20,9 @@ export const Container = styled.div`
   }
 `
 
-export const AnimeImage = styled.img`
+export const AnimeImage = styled.img.attrs(() => ({
+  loading: 'lazy',
+}))`
   width: 200px;
   border-radius: 15px;
 `

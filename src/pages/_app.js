@@ -32,13 +32,13 @@ function MyApp(props) {
 
 function Content({ Component, pageProps }) {
   const { isLoading, featuredAnimes } = useGlobal()
-  const [isCollapsed, setIsCollapsed] = useState(false)
+  const [isCollapsed, setIsCollapsed] = useState(true)
 
   return (
     <AppContainer>
       <Spinner isActive={isLoading} />
       <AppSider trigger={null} collapsible collapsed={isCollapsed}>
-        {/* <Brand /> */}
+        <Brand />
         <Navbar />
       </AppSider>
       <Layout>

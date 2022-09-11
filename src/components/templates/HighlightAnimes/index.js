@@ -4,8 +4,10 @@ import { Content, Section } from './styles'
 
 import FirstAnime from '../../molecules/FirstAnime'
 
+import { getTopRatedAnime } from '../../../utils/helpers'
+
 export default function HighlightAnimes({ data }) {
-  const firstAnime = data[5]
+  const firstAnime = getTopRatedAnime(data)
 
   return (
     <Section>

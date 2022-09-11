@@ -6,7 +6,9 @@ export const Container = styled.div`
   justify-content: flex-start;
 `
 
-export const PosterImage = styled.img`
+export const PosterImage = styled.img.attrs(() => ({
+  loading: 'lazy',
+}))`
   height: 200px;
   border-radius: 15px;
   margin-right: 10px;

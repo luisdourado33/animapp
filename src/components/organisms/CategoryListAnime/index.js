@@ -8,5 +8,9 @@ export default function CategoryListAnime({ data }) {
     <AnimeCard key={index} {...item} />
   ))
 
+  if (data.length == 0) {
+    return <List>Nenhum anime encontrado para esta categoria.</List>
+  }
+
   return <List>{renderCards}</List>
 }
