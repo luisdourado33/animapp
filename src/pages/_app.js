@@ -36,9 +36,9 @@ function Content({ Component, pageProps }) {
 
   return (
     <AppContainer>
-      <Spinner isActive />
+      <Spinner isActive={isLoading} />
       <AppSider trigger={null} collapsible collapsed={isCollapsed}>
-        <Brand />
+        {/* <Brand /> */}
         <Navbar />
       </AppSider>
       <Layout>

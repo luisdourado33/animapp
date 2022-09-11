@@ -1,34 +1,23 @@
-import { Button } from 'antd'
-import Title from 'antd/lib/skeleton/Title'
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  width: 70%;
   display: flex;
   align-items: center;
   /* background-image: url(${({ coverImage }) => coverImage}); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: rgba(0, 0, 0, 0.4);
   position: relative;
   border-radius: 15px;
+  padding-inline: 20px;
+  justify-content: center;
+  width: 55%;
   transition: box-shadow 0.5s;
   &:hover {
     -webkit-box-shadow: 5px 5px 15px -7px rgba(0, 0, 0, 0.6);
     box-shadow: 5px 5px 15px -7px rgba(0, 0, 0, 0.6);
   }
-`
-
-export const CoverImageOverlay = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  border-radius: 15px;
-  padding: 15px;
-  /* background-color: rgba(19, 101, 255, 0.8); */
-  background-color: rgba(0, 0, 0, 0.4);
 `
 
 export const AnimeImage = styled.img`

@@ -6,6 +6,7 @@ export const Section = styled.section`
   background-color: orangered;
   background-image: url(${overlayImage.src});
   position: relative;
+  margin-bottom: 15px;
   height: 350px;
 `
 

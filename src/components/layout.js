@@ -4,7 +4,7 @@ import { Layout } from 'antd'
 const { Header, Footer, Sider, Content } = Layout
 
 export const AppContainer = styled(Layout)`
-  height: 100vh;
+  height: 100%;
 `
 export const AppHeader = styled(Header)`
   padding: 15px;

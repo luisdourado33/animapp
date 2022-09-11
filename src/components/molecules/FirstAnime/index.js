@@ -18,26 +18,22 @@ import AverageRatingBadge from '../AverageRatingBadge'
 export default function FirstAnime({ data }) {
   return (
     <Container coverImage={data?.attributes?.coverImage?.original}>
-      <CoverImageOverlay>
-        <AnimeImage
-          src={data?.attributes?.posterImage?.original}
-          alt="Anime em destaque"
-        />
+      <AnimeImage
+        src={data?.attributes?.posterImage?.original}
+        alt="Anime em destaque"
+      />
 
-        <AnimeDetails>
-          <BestAnimeBadge />
-          <InfoContainer>
-            <AnimeTitle>{data?.attributes?.canonicalTitle}</AnimeTitle>
-            <MetricsContainer>
-              <AgeRatingGuide>
-                {data?.attributes?.ageRatingGuide}
-              </AgeRatingGuide>
-              <AverageRatingBadge value={data?.attributes?.averageRating} />
-            </MetricsContainer>
-          </InfoContainer>
-          <SeeDetailsButton label="Ver detalhes" />
-        </AnimeDetails>
-      </CoverImageOverlay>
+      <AnimeDetails>
+        <BestAnimeBadge />
+        <InfoContainer>
+          <AnimeTitle>{data?.attributes?.canonicalTitle}</AnimeTitle>
+          <MetricsContainer>
+            <AgeRatingGuide>{data?.attributes?.ageRatingGuide}</AgeRatingGuide>
+            <AverageRatingBadge value={data?.attributes?.averageRating} />
+          </MetricsContainer>
+        </InfoContainer>
+        <SeeDetailsButton label="Ver detalhes" />
+      </AnimeDetails>
     </Container>
   )
 }
