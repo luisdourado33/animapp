@@ -9,7 +9,6 @@ export const AppContainer = styled(Layout)`
 `
 export const AppHeader = styled(Header)`
   display: flex;
-  padding: 15px;
   align-items: center;
 `
 export const AppFooter = styled(Footer)`
