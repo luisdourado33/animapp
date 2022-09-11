@@ -4,11 +4,22 @@ import { useRouter } from 'next/router'
 import { useGlobal } from '../../../context/Global'
 import { ApiService } from '../../../services/animapp'
 
+import {
+  AgeRatingGuide,
+  AnimeSpec,
+  AnimeTitle,
+  Container,
+  Content,
+  CoverImage,
+  PosterImage,
+} from './styles'
+
 export default function AnimeDetails() {
   const router = useRouter()
+  const { id } = router.query
+
   const [anime, setAnime] = useState({})
   const { setIsLoading } = useGlobal()
-  const { id } = router.query
 
   async function getAnimeById() {
     setIsLoading(true)
@@ -17,18 +28,17 @@ export default function AnimeDetails() {
       await ApiService.findAnimeById(id)
         .then((res) => {
           const { data } = res.data
-          if (data.length > 0) {
-            console.log('Anime encontrado.')
-            setAnime(data[0])
+          if (Object.keys(data).length > 0) {
+            window.document.title = `${data.attributes.canonicalTitle} - AnimApp`
+            setAnime(data)
             setIsLoading(false)
           }
         })
         .catch((err) => {
-          console.log('ID: ' + id)
-          console.log('Houve um erro ao requisitar o anime.')
+          console.error('Houve um erro ao requisitar o anime.')
+          console.log(err)
         })
         .finally((res) => {
-          console.log('res', res)
           setIsLoading(false)
         })
     }
@@ -38,5 +48,16 @@ export default function AnimeDetails() {
     getAnimeById()
   }, [id])
 
-  return <div>{JSON.stringify(anime)}</div>
+  return (
+    <Container>
+      <CoverImage posterImage={anime.attributes?.coverImage?.original}>
+        <PosterImage src={anime.attributes?.posterImage.original} />
+        <Content>
+          <AnimeTitle>{anime.attributes?.canonicalTitle}</AnimeTitle>
+          <AgeRatingGuide>{anime.attributes?.ageRatingGuide}</AgeRatingGuide>
+        </Content>
+      </CoverImage>
+      <AnimeSpec>test</AnimeSpec>
+    </Container>
+  )
 }
