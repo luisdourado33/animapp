@@ -1,7 +1,7 @@
 import '../styles/global.less'
 import '../styles/global.css'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 import { GlobalProvider, useGlobal } from '../context/Global'
 import { Layout } from 'antd'
