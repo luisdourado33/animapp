@@ -12,13 +12,22 @@ export default function Navbar() {
     {
       label: 'Início',
       icon: <HomeOutlined />,
+      key: '/',
       onClick: () => router.push('/'),
     },
     {
       label: 'Sobre',
       icon: <QuestionCircleOutlined />,
+      key: '/about',
       onClick: () => router.push('/about'),
+      active: true,
     },
   ]
-  return <Container items={optionsMenu} theme="dark" />
+  return (
+    <Container
+      items={optionsMenu}
+      theme="dark"
+      selectedKeys={[router.asPath]}
+    />
+  )
 }
