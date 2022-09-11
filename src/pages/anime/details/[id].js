@@ -57,7 +57,7 @@ export default function AnimeDetails() {
           <AgeRatingGuide>{anime.attributes?.ageRatingGuide}</AgeRatingGuide>
         </Content>
       </CoverImage>
-      <AnimeSpec>test</AnimeSpec>
+      <AnimeSpec></AnimeSpec>
     </Container>
   )
 }
