@@ -7,13 +7,13 @@ export const Section = styled.section`
   background-image: url(${overlayImage.src});
   position: relative;
   margin-bottom: 15px;
-  height: 350px;
 `
 
 export const Content = styled.div`
   display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 100%;
+
   padding: 15px;
   justify-content: space-between;
   background-color: rgba(19, 101, 255, 0.7);

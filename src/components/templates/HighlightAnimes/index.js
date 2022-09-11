@@ -13,8 +13,17 @@ export default function HighlightAnimes({ data }) {
   return (
     <Section>
       <Content>
-        <FirstAnime data={firstAnime} />
-        <FeaturedAnimes />
+        Destaques
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            height: '300px',
+          }}
+        >
+          <FirstAnime data={firstAnime} />
+          <FeaturedAnimes />
+        </div>
       </Content>
     </Section>
   )

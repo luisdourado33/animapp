@@ -34,7 +34,6 @@ export default function FirstAnime({ data }) {
         src={data?.attributes?.posterImage?.original}
         alt="Anime em destaque"
       />
-
       <AnimeDetails>
         <BestAnimeBadge />
         <InfoContainer>

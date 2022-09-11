@@ -2,18 +2,17 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
-  /* background-image: url(${({ coverImage }) => coverImage}); */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgba(0, 0, 0, 0.4);
   position: relative;
+  align-items: center;
+  height: auto;
+  padding-block: 15px;
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   padding-inline: 20px;
   justify-content: center;
   width: auto;
   transition: box-shadow 0.5s;
+
   &:hover {
     -webkit-box-shadow: 5px 5px 15px -7px rgba(0, 0, 0, 0.6);
     box-shadow: 5px 5px 15px -7px rgba(0, 0, 0, 0.6);
