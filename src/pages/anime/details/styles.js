@@ -54,4 +54,6 @@ export const AnimeSpec = styled.div`
   background-color: rgba(19, 101, 255, 1);
 `
 
-export default Comp = () => {}
+const Comp = styled.span``
+
+export default Comp
