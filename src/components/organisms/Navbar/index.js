@@ -19,7 +19,7 @@ export default function Navbar() {
       label: 'Sobre',
       icon: <QuestionCircleOutlined />,
       key: '/about',
-      onClick: () => router.push('/about'),
+      onClick: () => router.push('https://github.com/luisdourado33/animapp'),
       active: true,
     },
   ]
