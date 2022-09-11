@@ -9,6 +9,7 @@ export const Container = styled.div`
 export const PosterImage = styled.img.attrs(() => ({
   loading: 'lazy',
 }))`
+  width: 85px;
   height: 120px;
   border-radius: 15px;
   margin-right: 10px;
