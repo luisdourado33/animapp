@@ -1,6 +1,10 @@
 import React from 'react'
 import { Btn } from './styles'
 
-export default function SeeDetailsButton({ label }) {
-  return <Btn theme="dark">{label}</Btn>
+export default function SeeDetailsButton({ label, onClick }) {
+  return (
+    <Btn theme="dark" onClick={onClick}>
+      {label}
+    </Btn>
+  )
 }

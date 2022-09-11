@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { useRouter } from 'next/router'
+
 import {
   AgeRatingGuide,
   AnimeDetails,
@@ -16,6 +18,16 @@ import SeeDetailsButton from '../../atoms/SeeDetailsButton'
 import AverageRatingBadge from '../AverageRatingBadge'
 
 export default function FirstAnime({ data }) {
+  const router = useRouter()
+
+  const handleNavigate = () => {
+    const { id } = data
+
+    if (id) {
+      router.push(`/anime/details/${id}`)
+    }
+  }
+
   return (
     <Container coverImage={data?.attributes?.coverImage?.original}>
       <AnimeImage
@@ -32,7 +44,7 @@ export default function FirstAnime({ data }) {
             <AverageRatingBadge value={data?.attributes?.averageRating} />
           </MetricsContainer>
         </InfoContainer>
-        <SeeDetailsButton label="Ver detalhes" />
+        <SeeDetailsButton label="Ver detalhes" onClick={handleNavigate} />
       </AnimeDetails>
     </Container>
   )

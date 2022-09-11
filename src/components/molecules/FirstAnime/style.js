@@ -12,7 +12,7 @@ export const Container = styled.div`
   border-radius: 15px;
   padding-inline: 20px;
   justify-content: center;
-  width: 55%;
+  width: auto;
   transition: box-shadow 0.5s;
   &:hover {
     -webkit-box-shadow: 5px 5px 15px -7px rgba(0, 0, 0, 0.6);

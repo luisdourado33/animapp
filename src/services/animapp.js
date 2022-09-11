@@ -18,10 +18,10 @@ export class ApiService {
     })
   }
 
-  static findAnimeByName(name) {
+  static findAnimeById(id) {
     return axios({
       method: 'GET',
-      url: `${api.baseURL}/anime?filter[text]=${name}`,
+      url: `${api.baseURL}/anime/${id}`,
       headers: api.headers,
     })
   }

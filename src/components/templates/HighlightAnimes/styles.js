@@ -14,8 +14,8 @@ export const Content = styled.div`
   display: flex;
   width: 100%;
   height: 100%;
-  position: absolute;
   padding: 15px;
+  justify-content: space-between;
   background-color: rgba(19, 101, 255, 0.7);
   color: #ffff;
 `
