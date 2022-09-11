@@ -4,13 +4,12 @@ export const Container = styled.div`
   display: flex;
   position: relative;
   align-items: center;
-  height: auto;
   padding-block: 15px;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 15px;
   padding-inline: 20px;
   justify-content: center;
-  width: auto;
+  height: fit-content;
   transition: box-shadow 0.5s;
 
   &:hover {

@@ -8,7 +8,7 @@ export const Container = styled.div`
   padding: 10px;
   border-radius: 100px;
   width: 100%;
-  /* height: fit-content; */
+  height: fit-content;
   border: 1px solid transparent;
   transition: all 0.5s;
 

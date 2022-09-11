@@ -13,12 +13,11 @@ export default function HighlightAnimes({ data }) {
   return (
     <Section>
       <Content>
-        Destaques
         <div
           style={{
             display: 'flex',
             flexDirection: 'row',
-            height: '300px',
+            alignItems: 'center',
           }}
         >
           <FirstAnime data={firstAnime} />
