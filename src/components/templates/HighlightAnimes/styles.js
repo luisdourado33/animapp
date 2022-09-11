@@ -15,8 +15,22 @@ export const Content = styled.div`
   width: 100%;
   height: 15%;
   padding: 15px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   background-color: rgba(19, 101, 255, 0.7);
   color: #ffff;
+
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  @media (max-width: 1024px) {
+    .wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
 `

@@ -48,7 +48,7 @@ function Content({ Component, pageProps }) {
         <AppContent>
           <Component {...pageProps} />
         </AppContent>
-        <AppFooter>Footer</AppFooter>
+        <AppFooter>AnimApp - 2022</AppFooter>
       </Layout>
     </AppContainer>
   )

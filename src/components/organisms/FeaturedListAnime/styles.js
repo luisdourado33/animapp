@@ -4,10 +4,11 @@ export const List = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-
+  height: 290px;
+  justify-content: baseline;
   overflow: scroll;
   &::-webkit-scrollbar {
-    background-color: transparen;
+    background-color: transparent;
     border: 0px solid transparent;
     width: 5px;
   }

@@ -5,13 +5,12 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   background-color: transparent;
-  padding: 10px;
   border-radius: 100px;
-  width: 100%;
-  height: fit-content;
   border: 1px solid transparent;
   transition: all 0.5s;
-
+  padding: 10px;
+  width: 100%;
+  height: 100%;
   &:hover {
     border: 1px solid #eeee;
   }

@@ -9,7 +9,7 @@ export const Container = styled.div`
   border-radius: 15px;
   padding-inline: 20px;
   justify-content: center;
-  height: fit-content;
+  height: 320px;
   transition: box-shadow 0.5s;
 
   &:hover {

@@ -10,11 +10,12 @@ export const AppContainer = styled(Layout)`
 export const AppHeader = styled(Header)`
   display: flex;
   align-items: center;
+  height: fit-content;
 `
 export const AppFooter = styled(Footer)`
   padding: 15px;
 `
 export const AppSider = styled(Sider)`
-  padding: 15px;
+  width: 10px;
 `
 export const AppContent = styled(Content)``

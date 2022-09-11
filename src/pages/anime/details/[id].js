@@ -13,6 +13,7 @@ import {
   CoverImage,
   PosterImage,
 } from './styles'
+import { Badge } from 'antd'
 
 export default function AnimeDetails() {
   const router = useRouter()
@@ -53,11 +54,28 @@ export default function AnimeDetails() {
       <CoverImage posterImage={anime.attributes?.coverImage?.original}>
         <PosterImage src={anime.attributes?.posterImage.original} />
         <Content>
+          <Badge
+            count={anime.attributes?.averageRating}
+            style={{ width: 'fit-content', backgroundColor: 'orange' }}
+          />
           <AnimeTitle>{anime.attributes?.canonicalTitle}</AnimeTitle>
           <AgeRatingGuide>{anime.attributes?.ageRatingGuide}</AgeRatingGuide>
         </Content>
       </CoverImage>
-      <AnimeSpec></AnimeSpec>
+      <AnimeSpec>
+        <div className="spec-header">
+          <h2 className="synopsis-title">Sinopse</h2>
+          <p className="rank">
+            <strong>Posição no ranking:</strong> #{anime.attributes?.ratingRank}
+          </p>
+
+          <p className="popularity">
+            <strong>Popularidade:</strong> {anime.attributes?.popularityRank}
+          </p>
+        </div>
+
+        <p className="synopsis">{anime.attributes?.synopsis}</p>
+      </AnimeSpec>
     </Container>
   )
 }

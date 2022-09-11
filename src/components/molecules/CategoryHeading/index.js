@@ -5,6 +5,12 @@ const categories = [
   { label: 'Ação', value: 'action', disabled: false },
   { label: 'Comédia', value: 'comedy', disabled: false },
   { label: 'Terror', value: 'terror', disabled: false },
+  { label: 'Aventura', value: 'adventure', disabled: false },
+  { label: 'Fantasia', value: 'fantasy', disabled: false },
+  { label: 'Drama', value: 'drama', disabled: false },
+  { label: 'Esporte', value: 'sports', disabled: false },
+  { label: 'Suspense', value: 'suspense', disabled: false },
+  { label: 'Ficção científica', value: 'sci-fi', disabled: false },
 ]
 
 export default function CategoryHeading({ title, currentCategory }) {

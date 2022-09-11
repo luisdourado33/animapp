@@ -36,7 +36,9 @@ export const AnimeTitle = styled.h1`
   margin: 0px;
 `
 
-export const AgeRatingGuide = styled.span``
+export const AgeRatingGuide = styled.span`
+  color: #fff;
+`
 
 export const PosterImage = styled.img`
   position: relative;
@@ -52,6 +54,27 @@ export const AnimeSpec = styled.div`
   height: 250px;
   padding: 15px;
   background-color: rgba(19, 101, 255, 1);
+  padding-left: 240px;
+
+  .spec-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .synopsis-title {
+    font-weight: bolder;
+    font-size: 16px;
+    color: #ffff;
+  }
+
+  .synopsis {
+    font-size: 12px;
+    color: #ffff;
+  }
+
+  .rank {
+    color: #000;
+  }
 `
 
 const Comp = styled.span``
