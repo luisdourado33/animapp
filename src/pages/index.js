@@ -1,16 +1,16 @@
 import React from 'react'
-import { useGlobal } from '../context/Global'
 
-import HighlightHero from '../components/organisms/HighlightHero'
-import AnimeListSection from '../components/organisms/AnimeListSection'
+import { useGlobal } from '../context/Global'
+import { Content } from 'antd/lib/layout/layout'
+
+import HighlightAnimes from '../components/templates/HighlightAnimes'
 
 export default function Home() {
   const { featuredAnimes } = useGlobal()
 
   return (
-    <>
-      <HighlightHero data={featuredAnimes} />
-      <AnimeListSection title="Mais indicados" buttonLabel="Ver todos" />
-    </>
+    <Content>
+      <HighlightAnimes data={featuredAnimes} />
+    </Content>
   )
 }

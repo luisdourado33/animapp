@@ -1,31 +1,56 @@
 import '../styles/global.less'
 import '../styles/global.css'
 
-import Navbar from '../components/organisms/Navbar'
-import Spinner from '../components/molecules/Spinner'
+import { useState } from 'react'
 
 import { GlobalProvider, useGlobal } from '../context/Global'
+import { Layout } from 'antd'
+import {
+  AppContainer,
+  AppContent,
+  AppFooter,
+  AppHeader,
+  AppSider,
+} from '../components/layout'
 
-const AppContainer = ({ children }) => {
+import Spinner from '../components/molecules/Spinner'
+import Brand from '../components/atoms/Brand'
+import Navbar from '../components/organisms/Navbar'
+import HeaderBar from '../components/organisms/HeaderBar'
+
+const WrapperProvider = ({ children }) => {
   return <GlobalProvider>{children}</GlobalProvider>
 }
 
 function MyApp(props) {
   return (
-    <AppContainer>
+    <WrapperProvider>
       <Content {...props} />
-    </AppContainer>
+    </WrapperProvider>
   )
 }
 
 function Content({ Component, pageProps }) {
-  const { isLoading } = useGlobal()
+  const { isLoading, featuredAnimes } = useGlobal()
+  const [isCollapsed, setIsCollapsed] = useState(false)
+
   return (
-    <>
-      <Spinner isActive={isLoading} />
-      <Navbar />
-      <Component {...pageProps} />
-    </>
+    <AppContainer>
+      <Spinner isActive />
+      <AppSider trigger={null} collapsible collapsed={isCollapsed}>
+        <Brand />
+        <Navbar />
+      </AppSider>
+      <Layout>
+        <AppHeader>
+          <HeaderBar />
+        </AppHeader>
+        <AppContent>
+          <Component {...pageProps} />
+        </AppContent>
+        <AppFooter>Footer</AppFooter>
+      </Layout>
+    </AppContainer>
   )
 }
 

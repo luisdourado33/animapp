@@ -1,10 +1,7 @@
 import React from 'react'
-import { Container, Typography } from './styles'
 
-export default function Brand({ children }) {
-  return (
-    <Container>
-      <Typography type="primary">{children}</Typography>
-    </Container>
-  )
+import { Text } from './styles'
+
+export default function Brand(props) {
+  return <Text {...props}>AnimApp</Text>
 }
