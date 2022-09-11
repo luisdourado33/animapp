@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
+
+import { ApiService } from '../../../services/animapp'
+import { useGlobal } from '../../../context/Global'
+
 import { Section } from './styles'
 
 import CategoryHeading from '../../molecules/CategoryHeading'
 import CategoryListAnime from '../../organisms/CategoryListAnime'
-import { ApiService } from '../../../services/animapp'
-import { useGlobal } from '../../../context/Global'
 
 export default function CategoryGrid({ data }) {
   const { isLoading, setIsLoading } = useGlobal()
