@@ -4,7 +4,6 @@ export const Container = styled.div`
   display: flex;
   border-radius: 15px;
   padding: 15px;
-  width: 35%;
   margin-left: 10px;
   transition: box-shadow 0.5s;
   background-color: rgba(0, 0, 0, 0.4);

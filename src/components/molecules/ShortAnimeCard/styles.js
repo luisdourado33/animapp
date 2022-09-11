@@ -13,4 +13,7 @@ export const PosterImage = styled.img.attrs(() => ({
   border-radius: 15px;
   margin-right: 10px;
   margin-bottom: 10px;
+  &:hover {
+    cursor: pointer;
+  }
 `
