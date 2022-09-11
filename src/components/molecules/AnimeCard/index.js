@@ -1,10 +1,15 @@
 import React from 'react'
-import { Container, PosterImage } from './styles'
+import { AnimeSpec, Container, PosterImage } from './styles'
 
 export default function AnimeCard({ attributes }) {
   return (
     <Container>
-      <PosterImage src={attributes?.posterImage.original} />
+      <PosterImage posterImage={attributes?.posterImage.original}>
+        <AnimeSpec className="spec">
+          <span className="title">{attributes?.canonicalTitle}</span>
+          <span className="averageRating">{attributes?.ratingRank}</span>
+        </AnimeSpec>
+      </PosterImage>
     </Container>
   )
 }
