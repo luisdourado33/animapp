@@ -12,6 +12,17 @@ export const Container = styled.div`
   height: 320px;
   transition: box-shadow 0.5s;
 
+  @media (max-width: 425px) {
+    flex-direction: row;
+    padding-block: 20px;
+    height: fit-content;
+  }
+
+  @media (max-width: 1024px) {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
   &:hover {
     -webkit-box-shadow: 5px 5px 15px -7px rgba(0, 0, 0, 0.6);
     box-shadow: 5px 5px 15px -7px rgba(0, 0, 0, 0.6);
@@ -23,6 +34,10 @@ export const AnimeImage = styled.img.attrs(() => ({
 }))`
   width: 200px;
   border-radius: 15px;
+
+  @media (max-width: 425px) {
+    width: 50%;
+  }
 `
 
 export const AnimeDetails = styled.div`
@@ -45,6 +60,12 @@ export const AnimeTitle = styled.h1`
   line-height: 40px;
   color: #ffff;
   margin: 0px;
+
+  @media (max-width: 425px) {
+    font-size: 12px;
+    line-height: initial;
+  }
+
   &:hover {
     cursor: pointer;
     color: #eee;

@@ -11,6 +11,7 @@ import {
   AppFooter,
   AppHeader,
   AppSider,
+  MainContainer,
 } from '../components/layout'
 
 import Spinner from '../components/molecules/Spinner'
@@ -32,25 +33,27 @@ function MyApp(props) {
 
 function Content({ Component, pageProps }) {
   const { isLoading, featuredAnimes } = useGlobal()
-  const [isCollapsed, setIsCollapsed] = useState(false)
+  const [isCollapsed, setIsCollapsed] = useState(true)
 
   return (
-    <AppContainer>
-      <Spinner isActive={isLoading} />
-      <AppSider trigger={null} collapsible collapsed={isCollapsed}>
-        {/* <Brand /> */}
-        <Navbar />
-      </AppSider>
-      <Layout>
-        <AppHeader>
-          <HeaderBar />
-        </AppHeader>
-        <AppContent>
-          <Component {...pageProps} />
-        </AppContent>
-        <AppFooter>AnimApp - 2022</AppFooter>
-      </Layout>
-    </AppContainer>
+    <MainContainer id="main-c">
+      <AppContainer>
+        <Spinner isActive={isLoading} />
+        <AppSider trigger={null} collapsible collapsed={isCollapsed}>
+          {/* <Brand /> */}
+          <Navbar />
+        </AppSider>
+        <Layout>
+          <AppHeader>
+            <HeaderBar />
+          </AppHeader>
+          <AppContent>
+            <Component {...pageProps} />
+          </AppContent>
+          <AppFooter>AnimApp - 2022</AppFooter>
+        </Layout>
+      </AppContainer>
+    </MainContainer>
   )
 }
 

@@ -7,6 +7,11 @@ export const List = styled.div`
   height: 290px;
   justify-content: baseline;
   overflow: scroll;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+  }
+
   &::-webkit-scrollbar {
     background-color: transparent;
     border: 0px solid transparent;

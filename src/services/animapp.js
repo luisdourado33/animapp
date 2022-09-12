@@ -5,7 +5,7 @@ export class ApiService {
   static getAllAnimes() {
     return axios({
       method: 'GET',
-      url: `${api.baseURL}/trending/anime`,
+      url: `${api.baseURL}/trending/anime?sort=-averageRating`,
       headers: api.headers,
     })
   }
@@ -22,6 +22,14 @@ export class ApiService {
     return axios({
       method: 'GET',
       url: `${api.baseURL}/anime/${id}`,
+      headers: api.headers,
+    })
+  }
+
+  static getAnimeByText(text) {
+    return axios({
+      method: 'GET',
+      url: `${api.baseURL}/anime?filter[text]=${text}`,
       headers: api.headers,
     })
   }

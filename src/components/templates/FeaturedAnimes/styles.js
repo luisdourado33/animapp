@@ -14,6 +14,15 @@ export const Container = styled.div`
   place-items: center;
   padding: 15px;
   padding-left: 40px;
+
+  @media (max-width: 414px) {
+    padding: 10px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+
   &:hover {
     -webkit-box-shadow: 5px 5px 15px -7px rgba(0, 0, 0, 0.6);
     box-shadow: 5px 5px 15px -7px rgba(0, 0, 0, 0.6);

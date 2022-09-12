@@ -23,6 +23,7 @@ export const PosterImage = styled.div`
   .spec {
     display: none;
   }
+
   &:hover {
     cursor: pointer;
     border: 0.5px solid RGBA(0, 0, 96, 0.8);
@@ -30,6 +31,11 @@ export const PosterImage = styled.div`
     .spec {
       display: flex;
     }
+  }
+
+  @media (max-width: 414px) {
+    width: 140px;
+    height: 50px;
   }
 `
 
