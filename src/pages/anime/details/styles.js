@@ -57,6 +57,7 @@ export const AgeRatingGuide = styled.span`
 `
 
 export const PosterImage = styled.img`
+  position: relative;
   border-radius: 15px;
   top: 40%;
   left: 30px;
