@@ -79,14 +79,6 @@ Este projeto possui somente essa versão, com possibilidade de crescimento no fu
 
 Este projeto está sob a licença MIT - veja o arquivo [LICENSE.md](https://github.com/luisdourado33/animapp/licence) para detalhes.
 
-## 🎁 Expressões de gratidão
-
-* Conte a outras pessoas sobre este projeto 📢;
-* Convide alguém da equipe para uma cerveja 🍺;
-* Um agradecimento publicamente 🫂;
-* etc.
-
-
 ---
 
 never give up.
