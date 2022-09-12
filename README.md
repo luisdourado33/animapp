@@ -61,6 +61,14 @@ O projeto possui as seguintes bibliotecas principais:
 
 Este projeto possui somente essa versão, com possibilidade de crescimento no futuro.
 
+## 📌 Screenshots
+
+![Dashboard da aplicação](https://github.com/luisdourado33/animapp/blob/dbde2599739ec803e84d0dd10920e02ecdf5c34f/dashboard.png?raw=true)
+
+![Detalhes de um anime](https://github.com/luisdourado33/animapp/blob/dbde2599739ec803e84d0dd10920e02ecdf5c34f/anime-details.png?raw=true)
+
+![Página de busca](https://github.com/luisdourado33/animapp/blob/dbde2599739ec803e84d0dd10920e02ecdf5c34f/search-page.png?raw=true)
+
 ## ✒️ Autores
 
 
