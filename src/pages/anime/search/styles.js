@@ -10,3 +10,6 @@ export const SearchTitle = styled.h1`
   font-weight: bolder;
   font-size: 15px;
 `
+
+const Comp = styled.span``
+export default Comp
